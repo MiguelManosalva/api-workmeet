@@ -1,5 +1,7 @@
 package hware.workmeet.service;
 
-public interface IUsuarioService {
+import hware.workmeet.model.Usuario;
+
+public interface IUsuarioService extends ICRUD<Usuario> {
 
 }

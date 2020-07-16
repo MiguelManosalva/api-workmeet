@@ -1,5 +1,7 @@
 package hware.workmeet.service;
 
-public interface INotificacionService {
+import hware.workmeet.model.Notificacion;
+
+public interface INotificacionService extends ICRUD<Notificacion> {
 
 }

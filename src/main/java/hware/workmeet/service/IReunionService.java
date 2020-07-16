@@ -1,5 +1,7 @@
 package hware.workmeet.service;
 
-public interface IReunionService {
+import hware.workmeet.model.Reunion;
+
+public interface IReunionService extends ICRUD<Reunion>{
 
 }

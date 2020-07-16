@@ -1,5 +1,9 @@
 package hware.workmeet.repo;
 
-public interface ITareaRepo {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import hware.workmeet.model.Tarea;
+
+public interface ITareaRepo extends JpaRepository<Tarea, Integer> {
 
 }

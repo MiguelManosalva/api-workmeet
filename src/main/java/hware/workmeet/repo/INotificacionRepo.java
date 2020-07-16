@@ -1,5 +1,9 @@
 package hware.workmeet.repo;
 
-public interface INotificacionRepo {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import hware.workmeet.model.Notificacion;
+
+public interface INotificacionRepo extends JpaRepository<Notificacion, Integer> {
 
 }

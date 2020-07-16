@@ -1,5 +1,7 @@
 package hware.workmeet.service;
 
-public interface ITareaService {
+import hware.workmeet.model.Tarea;
+
+public interface ITareaService extends ICRUD<Tarea> {
 
 }

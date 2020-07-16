@@ -1,5 +1,7 @@
 package hware.workmeet.service;
 
-public interface IEquipoService {
+import hware.workmeet.model.Equipo;
+
+public interface IEquipoService extends ICRUD<Equipo>{
 
 }

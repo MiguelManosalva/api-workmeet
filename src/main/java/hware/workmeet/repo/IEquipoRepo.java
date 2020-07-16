@@ -1,5 +1,9 @@
 package hware.workmeet.repo;
 
-public interface IEquipoRepo {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import hware.workmeet.model.Equipo;
+
+public interface IEquipoRepo extends JpaRepository<Equipo, Integer> {
 
 }

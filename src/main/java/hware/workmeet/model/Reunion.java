@@ -17,21 +17,21 @@ public class Reunion {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idReunion;
-	
-	@Size(min=5, message = "Asunto debe tener al menos 5 caracteres")
-	@Column(name = "asunto", nullable=false, length=50)
+
+	@Size(min = 5, message = "Asunto debe tener al menos 5 caracteres")
+	@Column(name = "asunto", nullable = false, length = 50)
 	private String asunto;
-	
-	@Size(min=5, message = "Lugar debe tener al menos 5 caracteres")
-	@Column(name = "lugar", nullable=true, length=50)
+
+	@Size(min = 5, message = "Lugar debe tener al menos 5 caracteres")
+	@Column(name = "lugar", nullable = true, length = 50)
 	private String lugar;
-	
-	@Size(min=5, message = "Descripción debe tener al menos 5 caracteres")
-	@Column(name = "descripcion", nullable=true, length=500)
+
+	@Size(min = 5, message = "Descripción debe tener al menos 5 caracteres")
+	@Column(name = "descripcion", nullable = true, length = 500)
 	private String descripcion;
-	
+
 	private LocalDateTime fechaInicio;
-	
+
 	private LocalDateTime fechaFin;
 
 	public Integer getIdReunion() {
@@ -81,7 +81,30 @@ public class Reunion {
 	public void setFechaFin(LocalDateTime fechaFin) {
 		this.fechaFin = fechaFin;
 	}
-	
-	
-	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((idReunion == null) ? 0 : idReunion.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Reunion other = (Reunion) obj;
+		if (idReunion == null) {
+			if (other.idReunion != null)
+				return false;
+		} else if (!idReunion.equals(other.idReunion))
+			return false;
+		return true;
+	}
+
 }

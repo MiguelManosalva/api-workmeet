@@ -1,5 +1,9 @@
 package hware.workmeet.repo;
 
-public interface IReunionRepo {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import hware.workmeet.model.Reunion;
+
+public interface IReunionRepo extends  JpaRepository<Reunion, Integer> {
 
 }
