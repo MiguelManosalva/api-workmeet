@@ -27,11 +27,14 @@ public class Usuario {
 
 	@Size(min = 5, message = "Nombre Usuario debe tener al menos 5 caracteres")
 	@Column(name = "nombreUsuario", nullable = false, unique = true, length = 50)
-	private String nombreUsuario;
+	private String username;
 
 	@Email
 	@Column(name = "correo", nullable = false, length = 50)
 	private String correo;
+
+	@Column(name = "clave", nullable = false)
+	private String password;
 
 	public Integer getIdUsuario() {
 		return idUsuario;
@@ -57,12 +60,12 @@ public class Usuario {
 		this.apellidos = apellidos;
 	}
 
-	public String getNombreUsuario() {
-		return nombreUsuario;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setNombreUsuario(String nombreUsuario) {
-		this.nombreUsuario = nombreUsuario;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getCorreo() {
@@ -71,6 +74,14 @@ public class Usuario {
 
 	public void setCorreo(String correo) {
 		this.correo = correo;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	@Override

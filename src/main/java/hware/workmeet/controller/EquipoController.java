@@ -49,10 +49,7 @@ public class EquipoController {
 	@PostMapping
 	public ResponseEntity<Equipo> registrar(@Valid @RequestBody Equipo equipo){
 		Equipo obj = service.registrar(equipo);
-		
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("{id}").buildAndExpand(equipo.getIdEquipo()).toUri();
-		return ResponseEntity.created(location).build();
-		
+		return new ResponseEntity<Equipo>(obj, HttpStatus.OK);		
 	}
 	
 	@PutMapping
