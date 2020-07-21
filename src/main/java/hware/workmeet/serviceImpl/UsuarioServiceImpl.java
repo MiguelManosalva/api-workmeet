@@ -30,9 +30,7 @@ public class UsuarioServiceImpl implements UserDetailsService {
 			throw new UsernameNotFoundException(String.format("Usuario no existe", username));
 		}
 		
-		List<GrantedAuthority> roles = new ArrayList<>();
-
-		UserDetails ud = new User(usuario.getUsername(), usuario.getPassword(), roles);
+		UserDetails ud = new User(usuario.getUsername(), usuario.getPassword(), null);
 		return ud;
 	}
 
