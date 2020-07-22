@@ -16,5 +16,5 @@ public interface IUsuarioReunionRepo extends JpaRepository<UsuarioReunion, Integ
 	Integer registrar(@Param("idUsuario") Integer idUsuario, @Param("idReunion") Integer idReunion);
 
 	@Query("from UsuarioReunion ce where ce.reunion.idReunion= :idReunion")
-	List<UsuarioReunion> listarParticipantesReunion(@Param("idReunion") Integer idconsulta);
+	List<UsuarioReunion> listarParticipantesReunion(@Param("idReunion") Integer idReunion);
 }

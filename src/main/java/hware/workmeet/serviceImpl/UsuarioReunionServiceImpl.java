@@ -19,4 +19,5 @@ public class UsuarioReunionServiceImpl implements IUsuarioReunionService {
 	public List<UsuarioReunion> listarParticipantesReunion(Integer idReunion) {
 		return repo.listarParticipantesReunion(idReunion);
 	}
+
 }
