@@ -4,8 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import hware.workmeet.model.Usuario;
 
-public interface IUsuarioRepo<T> extends JpaRepository<Usuario, Integer> {
+public interface IParticipanteRepo extends JpaRepository<Usuario, Integer>  {
 
-	Usuario findOneByUsername(String username);
-	
 }

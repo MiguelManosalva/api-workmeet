@@ -1,11 +1,6 @@
 package hware.workmeet.serviceImpl;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -33,5 +28,6 @@ public class UsuarioServiceImpl implements UserDetailsService {
 		UserDetails ud = new User(usuario.getUsername(), usuario.getPassword(), null);
 		return ud;
 	}
+	
 
 }

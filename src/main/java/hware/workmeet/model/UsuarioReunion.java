@@ -24,12 +24,12 @@ public class UsuarioReunion {
 		this.usuario = usuario;
 	}
 
-	public Reunion getEquipo() {
+	public Reunion getReunion() {
 		return reunion;
 	}
 
-	public void setEquipo(Reunion reunion) {
+	public void setReunion(Reunion reunion) {
 		this.reunion = reunion;
 	}
-  
+
 }
